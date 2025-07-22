@@ -92,8 +92,7 @@ java -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar:./FileClass myTes
 
 ### 3. Generazione della Documentazione Javadoc
 
-Per generare la documentazione tecnica del codice, che include tag
-personalizzati come richiesto dalle specifiche, eseguire questo comando:
+Per generare la documentazione tecnica del codice eseguire questo comando:
 
 ```bash
 javadoc \
