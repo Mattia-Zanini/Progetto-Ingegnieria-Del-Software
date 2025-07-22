@@ -66,6 +66,13 @@ Se si utilizza un compilatore moderno e non si vogliono visualizzare i warning r
 javac -Xlint:-removal -d FileClass -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar ./myAdapter/*.java myTest/*.java
 ```
 
+Se si vuole compilare il progetto (senza i warning) ed eseguire tutti i test, basta eseguire questo comando:
+
+```bash
+javac -Xlint:-removal -d FileClass -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar ./myAdapter/*.java myTest/*.java && \ 
+java -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar:./FileClass  myTest/TestRunner
+```
+
 ### 2. Esecuzione della Suite di Test
 
 Per eseguire tutti i test definiti nel package `myTest`, utilizzare il
@@ -80,13 +87,6 @@ argomento:
 
 ```bash
 java -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar:./FileClass myTest/TestRunner myTest.TestValueCollection
-```
-
-Se si vuole compilare il progetto (senza i warning) ed eseguire tutti i test, basta eseguire questo comando:
-
-```bash
-javac -Xlint:-removal -d FileClass -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar ./myAdapter/*.java myTest/*.java && \ 
-java -cp :./JUnit/junit-4.13.jar:./JUnit/hamcrest-core-1.3.jar:./FileClass  myTest/TestRunner
 ```
 
 
